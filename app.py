@@ -60,7 +60,11 @@ def chat_interface():
 
                 # Stream the response character by character
                 for char in response.iter_content(chunk_size=1):
-                    chunk = char.decode()
+                    # chunk = char.decode()
+                    try:
+                        chunk = char.decode('utf-8')  # Attempt to decode
+                    except UnicodeDecodeError:
+                        chunk = char.decode('utf-8', errors='replace')
                     response_text += chunk
                     response_container.markdown(response_text)
 
