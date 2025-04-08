@@ -19,7 +19,7 @@ def chat_interface():
     st.title("💬 Chat Interface")
 
     # Static unique ID
-    unique_id = "PHC-ISB-2025"
+    unique_id = "PHC-Project-2025"
     
     # Display the static Unique ID
     # st.write(f"**Unique ID**: `{unique_id}`")
